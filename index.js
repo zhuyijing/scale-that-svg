@@ -29,7 +29,7 @@ const scalePath = (node, scaleOptions) => {
       if (attr === 'stroke-width' || attr === 'strokeWidth') {
         o.attributes[attr] = +o.attributes[attr] * s
       }
-      if (!/fill|stroke|opacity|d/.test(attr)) {
+      if (!/fill|stroke|opacity|style|d/.test(attr)) {
         delete o.attributes[attr]
       }
     }
